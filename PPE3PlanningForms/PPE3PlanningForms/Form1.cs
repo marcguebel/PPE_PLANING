@@ -16,5 +16,16 @@ namespace PPE3PlanningForms
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 f2 = new Form2();
+            f2.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {fff
+            Form3 f3 = new Form3(); 
+        }
     }
 }
