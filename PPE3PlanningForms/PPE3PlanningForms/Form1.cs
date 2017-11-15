@@ -24,8 +24,9 @@ namespace PPE3PlanningForms
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {fff
-            Form3 f3 = new Form3(); 
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
         }
     }
 }
