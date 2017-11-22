@@ -11,21 +11,21 @@ namespace PPE3PlanningForms
         private int numero;
         private static int debut;
         private static int fin;
-        private List<Rv> LesRv;
+        private List<Evt> LesEvents;
 
         public static int Debut { get => debut; set => debut = value; }
         public static int Fin { get => fin; set => fin = value; }
 
         public Journee()
         {
-            debut = 9;
-            fin = 18;
-            this.LesRv = new List<Rv>();
+            debut = 7;
+            fin = 21;
+            this.LesEvents = new List<List<Evt>>();
             for (int i = 0; i < 9; i++)
             {
-                LesRv.Add(null);
+                LesEvenements.Add(null);
             }
-
+            LesEvents.Add(LesEvenements);
         }
 
         public int ChercherCreneau(Rv r)
