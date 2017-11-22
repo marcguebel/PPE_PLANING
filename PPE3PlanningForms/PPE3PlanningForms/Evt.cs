@@ -14,7 +14,7 @@ namespace PPE3PlanningForms
         public Evt()
         {
             this.description = "";
-            this.Duree = 0;
+            this.Duree = 0; 
         }
         public Evt(string description, int duree)
         {
