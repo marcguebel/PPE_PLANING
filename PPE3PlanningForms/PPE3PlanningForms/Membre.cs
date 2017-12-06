@@ -15,5 +15,13 @@ namespace PPE3PlanningForms
         public int Id_membre { get => id_membre; set => id_membre = value; }
         public string Nom { get => nom; set => nom = value; }
         public string Prenom { get => prenom; set => prenom = value; }
+    
+
+        public Membre (int id_membre, string nom, string prenom)
+        {
+            this.Id_membre = id_membre;
+            this.Nom = nom;
+            this.Prenom = prenom;
+        }
     }
 }
