@@ -11,7 +11,7 @@ namespace PPE3PlanningForms
         private int numero;
         private static int debut;
         private static int fin;
-        private List<Evt> LesEvents;
+        private List<List<Evt>> LesEvents;
 
         public static int Debut { get => debut; set => debut = value; }
         public static int Fin { get => fin; set => fin = value; }
@@ -85,7 +85,7 @@ namespace PPE3PlanningForms
             return 0;
         }*/
 
-        public bool PlacerRendezVous(int heure, Rv r)
+        public bool PlacerEvt(int heure, Evt e)
         {
             bool possible = true;
             int j = heure - Journee.Debut;

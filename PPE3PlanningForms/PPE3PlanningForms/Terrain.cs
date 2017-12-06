@@ -8,9 +8,12 @@ namespace PPE3PlanningForms
 {
     public class Terrain
     {
-        int id_terrain;
+        private int id_terrain;
+        private string nom;
+        List<Terrain> leTerrain;
 
         public int Id_terrain { get => id_terrain; set => id_terrain = value; }
+        public string Nom { get => nom; set => nom = value; }
     }
 
 }
