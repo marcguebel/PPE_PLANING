@@ -23,12 +23,12 @@ namespace PPE3PlanningForms
             this.LesEvents = new List<List<Evt>>();
             for (int i = 0; i < 9; i++)
             {
-                LesEvenements.Add(null);
+                LesEvents.Add(null);
             }
             LesEvents.Add(LesEvenements);
         }
 
-        public int ChercherCreneau(Rv r)
+        public int ChercherCreneau(Evt r)
         {
             bool trouve = false;
             int position = -10;
@@ -96,7 +96,7 @@ namespace PPE3PlanningForms
             }
             while ((possible) && (j < r.Duree + (heure - Journee.Debut)))
             {
-                if (LesRv[j] != null)
+                if (LesEvents[j] != null)
                 {
                     possible = false;
                 }
@@ -105,9 +105,9 @@ namespace PPE3PlanningForms
             if (possible)
             {
                 // on place le RV
-                for (int i = heure - Journee.Debut; i < heure - Journee.Debut + r.Duree; i++)
+                for (int i = heure - Journee.Debut; i < heure - Journee.Debut + e.Duree; i++)
                 {
-                    LesRv[i] = r;
+                    LesEvents[i] = e;
                 }
             }
 
