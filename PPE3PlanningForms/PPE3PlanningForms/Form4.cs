@@ -18,7 +18,7 @@ namespace PPE3PlanningForms
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) 
         {
             MySqlConnection conn;
             string myConnectionString = "server=172.17.0.6;uid=anthony;pwd=btssio;database=ppe3;";
