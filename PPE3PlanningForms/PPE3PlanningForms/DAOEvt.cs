@@ -34,7 +34,7 @@ namespace PPE3PlanningForms
             cmd.ExecuteNonQuery();
         }
 
-        public List<Evt> VoirEvt()
+        public List<Evt> VoirEvt() 
         {
             List<Evt> lesEvenement = new List<Evt>();
             string requete = "select * from evenement";
