@@ -25,7 +25,7 @@ namespace PPE3PlanningForms
             conn = new MySql.Data.MySqlClient.MySqlConnection();
             conn.ConnectionString = myConnectionString;
             conn.Open();
-            String requete = "SELECT * FROM membre WHERE Nom='" + textBox1.Text + "' AND Mdp'" + textBox2.Text + "';";
+            String requete = "SELECT * FROM membre WHERE Nom='" + textBox1.Text + "' AND Mdp='" + textBox2.Text + "';";
             MySqlCommand command = new MySqlCommand(requete, conn);
             int result = Convert.ToInt16(command.ExecuteScalar());
             
