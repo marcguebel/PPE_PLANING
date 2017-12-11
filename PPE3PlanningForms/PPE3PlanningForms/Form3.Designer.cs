@@ -1,4 +1,6 @@
-﻿namespace PPE3PlanningForms
+﻿using System;
+
+namespace PPE3PlanningForms
 {
     partial class Form3
     {
@@ -114,6 +116,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

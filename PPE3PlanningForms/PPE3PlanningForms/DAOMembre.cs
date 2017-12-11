@@ -52,6 +52,12 @@ namespace PPE3PlanningForms
                 ;
         }
 
+        public void Indisponibilite()
+        {
+            string requete = "SELECT ";
+            MySqlCommand cmd = new MySqlCommand(requete, conn);
+            cmd.ExecuteNonQuery();
+        }
 
     }
 }
