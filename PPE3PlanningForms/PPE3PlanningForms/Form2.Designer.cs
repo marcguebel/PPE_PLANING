@@ -43,7 +43,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 348);
+            this.ClientSize = new System.Drawing.Size(973, 565);
             this.Controls.Add(this.monthCalendar1);
             this.Name = "Form2";
             this.Text = "Form2";
