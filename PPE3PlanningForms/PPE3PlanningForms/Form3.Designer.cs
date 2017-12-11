@@ -112,16 +112,13 @@ namespace PPE3PlanningForms
             this.Controls.Add(this.label1);
             this.Name = "Form3";
             this.Text = "Form3";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            //this.Load += new System.EventHandler(this.Form3_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+
 
         #endregion
 
