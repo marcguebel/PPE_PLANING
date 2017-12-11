@@ -18,7 +18,7 @@ namespace PPE3PlanningForms
             string myConnectionString = "server=172.17.0.6;uid=anthony;pwd=btssio;database=ppe3;";
             conn = new MySql.Data.MySqlClient.MySqlConnection();
             conn.ConnectionString = myConnectionString;
-            conn.Open();
+            conn.Open(); 
         }
     
         public void AjoutMembre(Membre m)
