@@ -17,9 +17,8 @@ namespace PPE3PlanningForms
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-
         }
     }
 }
