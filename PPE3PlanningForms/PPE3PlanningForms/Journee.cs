@@ -9,14 +9,22 @@ namespace PPE3PlanningForms
     public class Journee
     {
         private int numero;
-        private static int debut;
-        private static int fin;
+        private DateTime debut;
+        private DateTime fin;
         private List<List<Evt>> LesEvents;
 
-        public static int Debut { get => debut; set => debut = value; }
-        public static int Fin { get => fin; set => fin = value; }
+        public int Numero { get => numero; set => numero = value; }
+        public DateTime Debut { get => debut; set => debut = value; }
+        public DateTime Fin { get => fin; set => fin = value; }
 
-        public Journee()
+        public Journee(int numero, DateTime debut, DateTime fin)
+        {
+            this.Numero = numero;
+            this.Debut = debut;
+            this.Fin = fin;
+        }
+
+        /*public Journee()
         {
             debut = 7;
             fin = 21;
@@ -26,9 +34,9 @@ namespace PPE3PlanningForms
                 LesEvents.Add(null);
             }
             LesEvents.Add(LesEvenements);
-        }
+        }*/
 
-        public int ChercherCreneau(Evt r)
+        /*public int ChercherCreneau(Evt r)
         {
             bool trouve = false;
             int position = -10;
@@ -56,7 +64,7 @@ namespace PPE3PlanningForms
                 i++;
             }
             return (position + 9);
-        }
+        }*/
         /*{
             bool trouver = false;
             for (int i = 0; i < this.LesRv.Count; i++)
@@ -85,7 +93,7 @@ namespace PPE3PlanningForms
             return 0;
         }*/
 
-        public bool PlacerEvt(int heure, Evt e)
+        /*public bool PlacerEvt(int heure, Evt e)
         {
             bool possible = true;
             int j = heure - Journee.Debut;
@@ -112,7 +120,7 @@ namespace PPE3PlanningForms
             }
 
             return possible;
-        }
+        }*/
         /*{
             if (heure > 8 && heure < 18)
             {
@@ -142,7 +150,7 @@ namespace PPE3PlanningForms
             return false;
         }*/
 
-        public Rv DonnerRendezVous(int heure)
+        /*public Rv DonnerRendezVous(int heure)
         {
             if (heure > 8 && heure < 18)
             {
@@ -154,6 +162,6 @@ namespace PPE3PlanningForms
                 }
             }
             return null;
-        }
+        }*/
     }
 }

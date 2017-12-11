@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAOEvt.cs" />
+    <Compile Include="DAOJournee.cs" />
     <Compile Include="DAOMembre.cs" />
     <Compile Include="Evt.cs" />
     <Compile Include="Form1.cs">

@@ -22,7 +22,7 @@ namespace PPE3PlanningForms
 
         public void CreerEvt(Evt e)
         {
-            string requete = "insert into evenement VALUES (" + e.Description + "','" + e.Duree + "' )";
+            string requete = "insert into evenement (Description, date_Evt, Heure_Debut, Heure_Fin, Id_Animateur, Id_Terrain) VALUES (" + e.Description + ", " + e.Date + ", " + e.HeureDebut + ", " + e.HeureFin + ", " + e.Animateur + ", " + e.Id_Terrain + ")";
             MySqlCommand cmd = new MySqlCommand(requete, conn);
             cmd.ExecuteNonQuery();
         }
@@ -42,8 +42,7 @@ namespace PPE3PlanningForms
             MySqlDataReader rdr = cmd.ExecuteReader();
             while (rdr.Read())
             {
-                Evt e = new Evt(Convert.ToInt16(rdr[0].ToString()), rdr[1].ToString(),
-                 rdr[2].ToString(), Convert.ToInt16(rdr[3].ToString()), rdr[4].ToString(), Convert.ToDouble(rdr[5].ToString()));               
+                Evt e = new Evt(Convert.ToInt16(rdr[0].ToString()), rdr[1].ToString(), rdr[2].ToString(), Convert.ToDouble(rdr[3].ToString()), Convert.ToDouble(rdr[4].ToString()), Convert.ToInt16(rdr[5].ToString()), Convert.ToInt16(rdr[6].ToString()));               
                 lesEvenement.Add(e);
             }
             rdr.Close();

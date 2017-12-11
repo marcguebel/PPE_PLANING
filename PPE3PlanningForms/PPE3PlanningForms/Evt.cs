@@ -8,41 +8,50 @@ namespace PPE3PlanningForms
 {
     public class Evt
     {
-        int id_evt;
+        private int id_Evt;
         private string description;
-        private int duree;
-        private Terrain leTerrain;
-        private List<Membre> lesMembres;
-        private Membre animation;
+        private string date;
+        private double heureDebut;
+        private double heureFin;
+        private int animateur;
+        private int id_Terrain;
+
+        public int Id_Evt { get => id_Evt; set => id_Evt = value; }
+        public string Description { get => description; set => description = value; }
+        public int Animateur { get => animateur; set => animateur = value; }
+        public int Id_Terrain { get => id_Terrain; set => id_Terrain = value; }
+        public string Date { get => date; set => date = value; }
+        public double HeureDebut { get => heureDebut; set => heureDebut = value; }
+        public double HeureFin { get => heureFin; set => heureFin = value; }
 
         public Evt()
         {
-            this.Id_evt = 0;
+            this.id_Evt = 0;
             this.Description = "";
-            this.Duree = 0; 
+            this.Date = "00/00/00";
+            this.HeureDebut = 00.00;
+            this.HeureFin = 23.59;
+            this.animateur = 0;
+            this.id_Terrain = 1;
         }
-        public Evt(int id_evt, string description, int duree, Terrain t, Membre m)
+        public Evt(int id_evt, string description, string date, double heureDebut, double heureFin, int animateur, int id_Terrain)
         {
-            this.Id_evt = id_evt;
+            this.id_Evt = id_evt;
             this.Description = description;
-            this.Duree = duree;
-            this.leTerrain = t;
-            lesMembres = new List<Membre>();
-            this.Animation = m;
+            this.Date = date;
+            this.HeureDebut = heureDebut;
+            this.HeureFin = heureFin;
+            this.animateur = animateur;
+            this.id_Terrain = id_Terrain;
         }
-
-        public int Id_evt { get => id_evt; set => id_evt = value; }
-        public int Duree { get => duree; set => duree = value; }
-        public string Description { get => description; set => description = value; }
-        public Membre Animation { get => animation; set => animation = value; }
        
 
-        public string ChangerAnimation(Membre m)
+        /*public string ChangerAnimation(Membre m)
         {
             //changement d'animation si absent
 
             this.Animation = m;
             return this.Animation.Nom;
-        }
+        }*/
     }
 }
