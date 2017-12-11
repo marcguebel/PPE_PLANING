@@ -14,6 +14,13 @@ namespace PPE3PlanningForms
 
         public int Id_terrain { get => id_terrain; set => id_terrain = value; }
         public string Nom { get => nom; set => nom = value; }
+
+        public Terrain (int id_terrain, string nom)
+        {
+            this.Id_terrain = id_terrain;
+            this.Nom = nom;
+        }
     }
+
 
 }
