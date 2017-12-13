@@ -31,7 +31,9 @@ namespace PPE3PlanningForms
             
             if (result > 0)
             {
+                Form4.ActiveForm.Hide();
                 new Form1().Show();
+               
             }
             else
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,25 @@ namespace PPE3PlanningForms
             MySqlCommand cmd = new MySqlCommand(requete, conn);
             cmd.ExecuteNonQuery();
         }
+
+        public string EvenementJournee(string date_Evenement)
+        {
+            string requete = "SELECT * FROM evenement where Date_Evt ='" + date_Evenement+"'";
+            MySqlCommand cmd = new MySqlCommand(requete, conn);
+            //cmd.ExecuteNonQuery();
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            //ArrayList monResult = new ArrayList();
+            string result = "";
+            while (rdr.Read())
+            {
+                //monResult.Add(rdr["Id_Evenement"].ToString());
+                result = result + rdr["Description"].ToString() + " de " + rdr["Heure_Debut"].ToString() + " a " + rdr["Heure_Fin"].ToString() + "\r\n";
+            }
+            rdr.Close();
+            EventArgs e = new EventArgs();
+            return result;
+        }
+
 
         public List<Evt> VoirEvt() 
         {
