@@ -44,5 +44,15 @@ namespace PPE3PlanningForms
             textBox1.Text = "Evenement pour le : " + dateFormat;
             textBox2.Text = result;
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace PPE3PlanningForms
         private void button1_Click(object sender, EventArgs e) 
         {
             MySqlConnection conn;
-            string myConnectionString = "server=172.17.0.6;uid=anthony;pwd=btssio;database=ppe3;";
+            string myConnectionString = "server=127.0.0.1;uid=root;pwd=;database=ppe_planing;";
             conn = new MySql.Data.MySqlClient.MySqlConnection();
             conn.ConnectionString = myConnectionString;
             conn.Open();
@@ -33,7 +33,6 @@ namespace PPE3PlanningForms
             {
                 Form4.ActiveForm.Hide();
                 new Form1().Show();
-               
             }
             else
             {
